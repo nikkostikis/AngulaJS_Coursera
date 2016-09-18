@@ -18,8 +18,15 @@
         return (item !== (""));
       });
       console.log(filteredLunchItemsArray);
-      if (filteredLunchItemsArray.length <= 3) {
-        $scope.msg = filteredLunchItemsArray.length + " items. Enjoy!";
+      $scope.colorClass = "green";
+      if (filteredLunchItemsArray.length == 0) {
+        $scope.msg = "Please enter data first";
+        $scope.colorClass = "red";
+      } else if (filteredLunchItemsArray.length <= 3) {
+        $scope.msg = filteredLunchItemsArray.length
+        + " item"
+        + (filteredLunchItemsArray.length == 1?"":"s")
+        +". Enjoy!";
       } else {
         $scope.msg = filteredLunchItemsArray.length + " items. Too much!";
       }
