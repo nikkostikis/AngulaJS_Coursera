@@ -1,0 +1,5 @@
+.message { font-size: 1.3em; font-weight: bold; }
+.red { color: red; }
+.green { color: green; }
+.form-control.red { color: black; border-color: red; }
+.form-control.green { color: black; border-color: green; }
